@@ -23,8 +23,8 @@ from openpyxl.worksheet.pagebreak import Break
 import statistics
 
 URL = 'https://redcap.smh.ca/redcap/api/'
-# API_KEY = '6BAE449EAF99669D21B5C183B54BE816'
-API_KEY = 'B0DD79E8FA872053F1D619C7159EAA07' #CANROCPROJECT
+
+API_KEY = '' #CANROCPROJECT
 project = Project(URL, API_KEY)
 
 def CreateSiteLevelCharts(site,ax):
@@ -262,7 +262,7 @@ def CreateSiteLevelCharts(site,ax):
 
 
 
-    plt.savefig('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/Survival/' + site + 'surv1.png', bbox_inches='tight')
+    plt.savefig('C:Charts/ChartImages/Survival/' + site + 'surv1.png', bbox_inches='tight')
 
     plt.show()
     plt.close()
@@ -445,7 +445,7 @@ def CreateSiteLevelCharts(site,ax):
 
     fig.tight_layout()
 
-    plt.savefig('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/Survival/' + site + 'surv2.png', bbox_inches='tight')
+    plt.savefig('C:/Charts/ChartImages/Survival/' + site + 'surv2.png', bbox_inches='tight')
     plt.show()
     plt.close()
 
@@ -634,7 +634,7 @@ def CreateSiteLevelCharts(site,ax):
     #
     fig.tight_layout()
 
-    plt.savefig('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/Survival/' + site + 'surv3.png', bbox_inches='tight')
+    plt.savefig('C:/Desktop/Charts/ChartImages/Survival/' + site + 'surv3.png', bbox_inches='tight')
     plt.show()
     plt.close()
 
@@ -660,12 +660,6 @@ def CreateSiteLevelCharts(site,ax):
     print(years)
     for year in years:
         year = int(year)
-
-
-
-        ######TO FIXXXXXXXXX
-
-
 
         value_list = [2, 3, 5]
         vfvtshockable_total = len(
@@ -743,7 +737,7 @@ def CreateSiteLevelCharts(site,ax):
     #
     fig.tight_layout()
 
-    plt.savefig('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/Survival/' + site + 'surv4.png', bbox_inches='tight')
+    plt.savefig('C:Charts/ChartImages/Survival/' + site + 'surv4.png', bbox_inches='tight')
     plt.show()
     plt.close()
 
@@ -895,7 +889,7 @@ def CreateSiteLevelCharts(site,ax):
     #
     fig.tight_layout()
 
-    plt.savefig('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/Survival/' + site + 'surv6.png', bbox_inches='tight')
+    plt.savefig('C:/Charts/ChartImages/Survival/' + site + 'surv6.png', bbox_inches='tight')
     plt.show()
     plt.close()
 
@@ -972,7 +966,7 @@ def CreateSiteLevelCharts(site,ax):
     #     # ax.bar_label(rects2, padding=3)
     #
     fig.tight_layout()
-    plt.savefig('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/Survival/' + site + 'surv7.png', bbox_inches='tight')
+    plt.savefig('C:/Charts/ChartImages/Survival/' + site + 'surv7.png', bbox_inches='tight')
     plt.show()
     plt.close()
 
@@ -1081,7 +1075,7 @@ def CreateSiteLevelCharts(site,ax):
 
     fig.tight_layout()
 
-    plt.savefig('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/Survival/' + site + 'surv8.png', bbox_inches='tight')
+    plt.savefig('C:/Charts/ChartImages/Survival/' + site + 'surv8.png', bbox_inches='tight')
     plt.show()
     plt.close()
 
