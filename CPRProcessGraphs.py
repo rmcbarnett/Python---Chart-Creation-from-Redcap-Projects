@@ -19,8 +19,8 @@ from openpyxl.worksheet.pagebreak import Break
 import statistics
 
 URL = 'https://redcap.smh.ca/redcap/api/'
-# API_KEY = '6BAE449EAF99669D21B5C183B54BE816'
-API_KEY = 'B0DD79E8FA872053F1D619C7159EAA07' #CANROCPROJECT
+
+API_KEY = '' #CANROCPROJECT
 project = Project(URL, API_KEY)
 
 def CreateSiteLevelCharts(site,ax):
@@ -119,11 +119,6 @@ def CreateSiteLevelCharts(site,ax):
         if goodrow == True:
             cprrowcount +=1
 
-
-
-
-
-
     df1= df.stack().reset_index()
 
     nationalmean = df1.loc[:,0].mean()
@@ -158,7 +153,7 @@ def CreateSiteLevelCharts(site,ax):
     plt.axhline(nationalmean,color ='red')
     plt.xticks(fontsize=6)
     plt.yticks(fontsize=6)
-    plt.savefig('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/'+site+'cpr1.png', bbox_inches='tight')
+    plt.savefig('C:/Charts/ChartImages/'+site+'cpr1.png', bbox_inches='tight')
 
     plt.close()
 
@@ -259,7 +254,7 @@ def CreateSiteLevelCharts(site,ax):
     plt.axhline(fraction_nationalmean,color ='red')
     plt.xticks(fontsize=7)
     plt.yticks(fontsize=7)
-    plt.savefig('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/'+site+'cpr2.png', bbox_inches='tight')
+    plt.savefig('C:/Charts/ChartImages/'+site+'cpr2.png', bbox_inches='tight')
     plt.close()
 
 
@@ -356,7 +351,7 @@ def CreateSiteLevelCharts(site,ax):
 
     plt.axhline(nationalmean,color ='red')
 
-    plt.savefig('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/'+site+'cpr3.png', bbox_inches='tight')
+    plt.savefig('C:/Charts/ChartImages/'+site+'cpr3.png', bbox_inches='tight')
     plt.close()
 
     greatestpause= 0
@@ -454,7 +449,7 @@ def CreateSiteLevelCharts(site,ax):
 
     plt.axhline(nationalmean,color ='red')
 
-    plt.savefig('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/'+site+'cpr4.png', bbox_inches='tight')
+    plt.savefig('C:/Charts/ChartImages/'+site+'cpr4.png', bbox_inches='tight')
     plt.close()
 
 
@@ -532,7 +527,7 @@ def CreateSiteLevelCharts(site,ax):
 
     plt.axhline(nationalmean, color='red')
 
-    plt.savefig('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/' + site + 'cpr5.png', bbox_inches='tight')
+    plt.savefig('C:/Charts/ChartImages/' + site + 'cpr5.png', bbox_inches='tight')
     plt.close()
 
 
@@ -611,7 +606,7 @@ def CreateSiteLevelCharts(site,ax):
 
     plt.axhline(nationalmean, color='red')
 
-    plt.savefig('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/' + site + 'cpr6.png', bbox_inches='tight')
+    plt.savefig('C:/Charts/ChartImages/' + site + 'cpr6.png', bbox_inches='tight')
     plt.close()
 
 
@@ -688,7 +683,7 @@ def CreateSiteLevelCharts(site,ax):
 
 
 
-    fname = "C:/Users/mcbarnettr/Desktop/Charts/"+site+"CPRProcessSummary.xlsx"
+    fname = "C:/Charts/"+site+"CPRProcessSummary.xlsx"
     workbook = Workbook()
     ws = workbook.active
     thin = Side(border_style="thin", color="000000")
@@ -798,13 +793,13 @@ def CreateSiteLevelCharts(site,ax):
             cell.border = thinBorder  # A5:D6 area cells set borders
     ws['A31'].font = Font(size=10, bold=True)
 
-    img1 = Image('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/'+site+'cpr1.png')
-    img2=Image('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/'+site+'cpr2.png')
-    img3=Image('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/'+site+'cpr3.png')
-    img4= Image('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/'+site+'cpr4.png')
-    img5= Image('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/' + site + 'cpr5.png')
-    img6= Image('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/' + site + 'cpr6.png')
-    img7 = Image('C:/Users/mcbarnettr/Desktop/Charts/ChartImages/' + site + 'cpr7.png')
+    img1 = Image('C:/Charts/ChartImages/'+site+'cpr1.png')
+    img2=Image('C:/Charts/ChartImages/'+site+'cpr2.png')
+    img3=Image('C:/Charts/ChartImages/'+site+'cpr3.png')
+    img4= Image('C:/Charts/ChartImages/'+site+'cpr4.png')
+    img5= Image('C://Charts/ChartImages/' + site + 'cpr5.png')
+    img6= Image('C://Charts/ChartImages/' + site + 'cpr6.png')
+    img7 = Image('C:/Charts/ChartImages/' + site + 'cpr7.png')
     ws.add_image(img1, 'A10')
     ws.add_image(img2, 'G10')
     ws.add_image(img3, 'A30')
