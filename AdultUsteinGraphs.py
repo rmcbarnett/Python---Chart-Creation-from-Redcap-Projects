@@ -25,8 +25,7 @@ import statistics
 import sys
 
 URL = 'https://redcap.smh.ca/redcap/api/'
-# API_KEY = '6BAE449EAF99669D21B5C183B54BE816'
-API_KEY = 'B0DD79E8FA872053F1D619C7159EAA07' #CANROCPROJECT
+API_KEY = '' #CANROCPROJECT
 project = Project(URL, API_KEY)
 
 
@@ -215,9 +214,7 @@ def CreateSiteLevelCharts(site):
 
     #UPDATE EXCEL OPTION
 
-    AdultUstenworkbook = load_workbook(filename="C:/Users\mcbarnettr/Desktop/Charts/AdultUsteinGraphs/Adult Utstein template.xlsx")
-    # TestWorkbook = load_workbook(filename="//vs-research/research/R3_Data/Received Data_CanROC/BC Data/Epi 4 Updated BC ROC Dataset v15-APR-20_Roger.xlsx")
-
+    AdultUstenworkbook = load_workbook(filename="C:/AdultUsteinGraphs/Adult Utstein template.xlsx")
     AdultUpsteinWorksheet = AdultUstenworkbook['Sheet2']
 
     AdultUpsteinWorksheet['B1'] = 'All (' + str(Ntotal)  +')'
@@ -241,7 +238,7 @@ def CreateSiteLevelCharts(site):
     AdultUpsteinWorksheet['E4'] = UnknownList[2]
 
 
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_"+site+".xlsx")
+    AdultUstenworkbook.save("C:/AdultUsteinGraphs/CanRoc/Adult_Utstein_"+site+".xlsx")
 
     print('Completed - Fig 1')
 
@@ -453,7 +450,7 @@ def CreateSiteLevelCharts(site):
     AdultUpsteinWorksheet['E8'] = UnknownList[2]
     AdultUpsteinWorksheet['E9'] = UnknownList[3]
 
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
+    AdultUstenworkbook.save("C:/Users/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
 
     print('Completed - Fig 2')
 
@@ -578,7 +575,7 @@ def CreateSiteLevelCharts(site):
     AdultUpsteinWorksheet['F28'] = UnknownList[0]
 
 
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
+    AdultUstenworkbook.save("C:/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
 
     print('Completed - Fig 3')
 
@@ -642,7 +639,7 @@ def CreateSiteLevelCharts(site):
     AdultUpsteinWorksheet['C33'] =  PublicLocationsList[0]
     AdultUpsteinWorksheet['C34'] =  PublicLocationsList[1]
 
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
+    AdultUstenworkbook.save("C:/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
 
     print('Completed - Fig 4')
 
@@ -717,7 +714,7 @@ def CreateSiteLevelCharts(site):
     AdultUpsteinWorksheet['F35'] = 'Other Private (' + str(private_locations) + ')'
     AdultUpsteinWorksheet['F36'] = AllLocationsList[4]
 
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
+    AdultUstenworkbook.save("C:/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
 
     print('Completed - Fig 5')
 
@@ -924,7 +921,7 @@ def CreateSiteLevelCharts(site):
     AdultUpsteinWorksheet['E50'] = UnknownList[3]
     AdultUpsteinWorksheet['E51'] = UnknownList[4]
 
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
+    AdultUstenworkbook.save("C:/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
 
     print('Completed - Fig 6')
 
@@ -1336,7 +1333,7 @@ def CreateSiteLevelCharts(site):
 
 
 
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_"+site+".xlsx")
+    AdultUstenworkbook.save("C:/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_"+site+".xlsx")
     print('Completed - Fig 7')
 
 
@@ -2318,7 +2315,7 @@ def CreateSiteLevelCharts(site):
 
 
 
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
+    AdultUstenworkbook.save("C:/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
     print('Completed - Fig 11')
 
 
@@ -2478,7 +2475,7 @@ def CreateSiteLevelCharts(site):
     AdultUpsteinWorksheet['E115'] = UnknownList[0]
 
 
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
+    AdultUstenworkbook.save("C:Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
     print('Completed - Fig 12')
 
 
@@ -2795,7 +2792,7 @@ def CreateSiteLevelCharts(site):
 
     AdultUpsteinNextWorksheet['C298'] = 'All = '+ str(Ntotal)
 
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
+    AdultUstenworkbook.save("C:/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
     print('Completed - Fig 13')
 
     # 14th   Response Intervals - Call received at dispatch to 1st vehicle arrival interval (Witnessed by EMS excluded) (N=339)
@@ -2834,7 +2831,7 @@ def CreateSiteLevelCharts(site):
     AdultUpsteinWorksheet['F145'] = greaterthanten_percent
     AdultUpsteinWorksheet['G145'] = Unknown_percent
     AdultUpsteinNextWorksheet['L298'] = 'All = '+ str(Ntotal)
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
+    AdultUstenworkbook.save("C:/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
     print('Completed - Fig 12')
 
 
@@ -2859,7 +2856,7 @@ def CreateSiteLevelCharts(site):
     AdultUpsteinWorksheet['C147'] = round(graphicstenpercentile,4)
     AdultUpsteinWorksheet['D147'] = round(graphicspercentile,4)
     AdultUpsteinNextWorksheet['K292'] = 'All =' + str(Ntotal)
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
+    AdultUstenworkbook.save("C:/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
     print('Completed - Fig 13')
 
 
@@ -2938,7 +2935,7 @@ def CreateSiteLevelCharts(site):
     AdultUpsteinWorksheet['F166'] = greaterthanten_percent
     AdultUpsteinWorksheet['G166'] = Unknown_percent
     # AdultUpsteinNextWorksheet['B319'] = 'N =' + str(Ntotal)
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
+    AdultUstenworkbook.save("C:/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
     print('Completed - Fig 16')
 
 
@@ -3013,7 +3010,7 @@ def CreateSiteLevelCharts(site):
     AdultUpsteinWorksheet['B212'] = Advanced_percent
     AdultUpsteinNextWorksheet['B326'] = 'N =' + str(Ntotal)
 
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
+    AdultUstenworkbook.save("C:/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
     print('Completed - Fig 16')
 
 
@@ -3386,7 +3383,7 @@ def CreateSiteLevelCharts(site):
 
     AdultUpsteinNextWorksheet['J338'] = f'({fractiontotal_records } records, {round(fractionminutepercent * 100,2)} % of minutes meet target of >=.60)'
 
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
+    AdultUstenworkbook.save("C:/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
 
     # Compression Depth
 
@@ -3606,7 +3603,7 @@ def CreateSiteLevelCharts(site):
         AdultUpsteinWorksheet['D193'] = ''
 
 
-    AdultUstenworkbook.save("C:/Users/mcbarnettr/Desktop/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
+    AdultUstenworkbook.save("C:/Charts/AdultUsteinGraphs/CanRoc/Adult_Utstein_" + site + ".xlsx")
 
     allfields = [ 'cr_scause','cr_tx', 'cr_pyhalt', 'cr_witbys', 'cr_estageu', 'cr_estagev', 'cr_agecat',
                  'cr_scause', 'cr_cpratt', 'cr_loctyp', 'cr_aedapp', 'cr_aedshk', 'cr_frhyem',
@@ -3883,7 +3880,7 @@ def CreateSiteLevelCharts(site):
 
 
 
-fig, ax = plt.subplots()
+
 #
 # sites = ['BC','SK','AL','PEI','TO','MTL',TT']
 sites = ['BC','TO','OTT','PEI','SK','AL']
