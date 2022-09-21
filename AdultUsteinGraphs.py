@@ -24,7 +24,7 @@ from openpyxl.worksheet.pagebreak import Break
 import statistics
 import sys
 
-URL = 'https://redcap.smh.ca/redcap/api/'
+URL = 'https://redcap/.../api/'
 API_KEY = '' #CANROCPROJECT
 project = Project(URL, API_KEY)
 
